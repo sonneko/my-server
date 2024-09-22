@@ -4,6 +4,9 @@ const server = http.createServer();
 
 server.on("request", function (req, res) {
   res.writeHead(200, { "Content-Type": "text/plain" });
+  if (req.url == "/quit") {
+    process.exit(1);
+  }
   res.write("Hello");
   console.log("accept");
   res.end();
