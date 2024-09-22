@@ -8,6 +8,7 @@ server.on("request", function (req, res) {
     console.log("server stop");
     process.exit(1);
   } else if (req.url == "/setting") {
+    res.writeHead(200, {"Content-Type": "text/html"})
     res.write(`<a href="quit">server stop</a>`);
   } else {
     res.write("Hello");
