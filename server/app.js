@@ -5,9 +5,13 @@ const server = http.createServer();
 server.on("request", function (req, res) {
   res.writeHead(200, { "Content-Type": "text/plain" });
   if (req.url == "/quit") {
+    console.log("server stop");
     process.exit(1);
+  } else if (req.url == "/setting") {
+    res.write(`<a href="quit">server stop</a>`);
+  } else {
+    res.write("Hello");
   }
-  res.write("Hello");
   console.log("accept");
   res.end();
 });
