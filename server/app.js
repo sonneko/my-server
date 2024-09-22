@@ -8,5 +8,5 @@ server.on("request", function (req, res) {
   res.end();
 });
 
-server.listen(8080, "192.168.0.255");
+server.listen(8080, "192.168.0.57");
 console.log("server listen...");
