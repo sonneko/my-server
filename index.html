@@ -28,6 +28,7 @@
         let url = "https://script.google.com/macros/s/AKfycbwfR4VoHQ4XQ_un45yRUt9HvgK7ctrajItqnnknn3ozyUOa3JUV5zfQ50zbmXIZsrrT/exec";
         url + - "?";
         url += "pass=" + pass.value + "&";
+        url += "type=" + "request" + "&";
         url += "script=" + script.value;
         fetch(url);
     }
