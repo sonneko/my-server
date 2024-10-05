@@ -17,5 +17,5 @@ server.on("request", function (req, res) {
   res.end();
 });
 
-server.listen(8080, "0.0.0.0");
+server.listen(8080, "localhost");
 console.log("server listen...");
